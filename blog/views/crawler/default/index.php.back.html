@@ -1,0 +1,22 @@
+<?php
+use app\common\widgets\ListView;
+$this->registerJsFile('@web/js/blog/ace.js',['depends'=>'yii\web\JqueryAsset']);
+$this->registerjsFile('@web/js/blog/markdown.js',['depends'=>'yii\web\JqueryAsset']);
+$this->registerJs('
+    var markdown = ace.require("ace/handler/Markdown");
+    $(".markdown").each(function(index,item){
+        $(this).html(markdown.toHTML($(this).html()));
+    });
+');
+?>
+
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <?=ListView::widget([
+                'dataProvider' => $dataProvider,
+                'itemView'=>'/default/listitem',
+            ]);
+        ?>
+    </div>
+</div>
