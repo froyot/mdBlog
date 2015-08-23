@@ -16,17 +16,7 @@ use app\admin\models\Post;
  */
 class PostController extends BaseController
 {
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['post'],
-                ],
-            ],
-        ];
-    }
+    
 
     /**
      * Lists all Post models.
@@ -34,6 +24,7 @@ class PostController extends BaseController
      */
     public function actionIndex()
     {
+        //var_dump(Yii::$app->user->isGuest);die;
         $searchModel = new PostSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
