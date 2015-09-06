@@ -10,11 +10,11 @@ $this->title = 'Create Post';
 $this->params['breadcrumbs'][] = ['label' => 'Posts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
-$this->registerJsFile('@web/js/blog/ace.js',['depends'=>'yii\web\YiiAsset']);
-$this->registerJsFile('@web/js/blog/theme-twilight.js',['depends'=>'yii\web\YiiAsset']);
-$this->registerJsFile('@web/js/blog/mode-markdown.js',['depends'=>'yii\web\YiiAsset']);
-$this->registerJsFile('@web/js/blog/markdown.js',['depends'=>'yii\web\YiiAsset']);
-$this->registerJsFile('@web/js/blog/editPost.js',['depends'=>'yii\web\YiiAsset']);
+$this->registerJsFile('@web/web/js/blog/ace.js',['depends'=>'yii\web\YiiAsset']);
+$this->registerJsFile('@web/web/js/blog/theme-twilight.js',['depends'=>'yii\web\YiiAsset']);
+$this->registerJsFile('@web/web/js/blog/mode-markdown.js',['depends'=>'yii\web\YiiAsset']);
+$this->registerJsFile('@web/web/js/blog/markdown.js',['depends'=>'yii\web\YiiAsset']);
+$this->registerJsFile('@web/web/js/blog/editPost.js',['depends'=>'yii\web\YiiAsset']);
 $this->registerCss('
 #md_post_content {
         position: relative;

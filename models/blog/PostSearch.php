@@ -48,7 +48,7 @@ class PostSearch extends Post
      */
     public function search($params)
     {
-        $query = Post::find()->joinWith('relations');
+        $query = Post::find()->joinWith('relations')->orderBy('date desc,id desc');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

@@ -17,7 +17,7 @@ use app\admin\models\Category;
     <?= $form->field($model, 'content')->textArea(['style'=>'display:none;','id'=>'post_content']) ?>
     <?= Html::tag('div',$model->content,['id'=>'md_post_content']);?>
 
-        <iframe src="/static/blog/preview.html" id="preview" style="width:100%;height:400px;"></iframe>
+        <iframe src="/web/static/blog/preview.html" id="preview" style="width:100%;height:400px;"></iframe>
 
 
 

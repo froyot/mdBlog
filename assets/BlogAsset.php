@@ -15,12 +15,15 @@ use yii\web\AssetBundle;
  */
 class BlogAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+
+    public $basePath = '@webroot/web/';
+    public $baseUrl = '@web/web/';
     public $css = [
         'css/blog/screen.css',
     ];
     public $js = [
+    'js/blog/ace.js',
+    'js/blog/markdown.js',
     ];
     public $depends = [
        'yii\web\JqueryAsset',

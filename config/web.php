@@ -13,11 +13,18 @@ $config = [
         'admin' => [
             'class' => 'app\admin\Admin',
         ],
+        'import' => [
+            'class' => 'app\import\Import',
+        ],
+        'api' => [
+            'class' => 'app\Api\Api',
+        ],
     ],
+    'defaultRoute'=>'blog/default/index',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'asdfasdfasdfasdfafasfdasdf',
+            'cookieValidationKey' => 'asd12312fasdfasdfasdfafasfdasdf',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -49,7 +56,10 @@ $config = [
            'showScriptName' => false,
            'enablePrettyUrl'=>true,
         ],
-
+        'assetManager' => [
+            'baseUrl' => '@web/web/assets',
+            'basePath'=>'@webroot/web/assets',
+        ],
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
